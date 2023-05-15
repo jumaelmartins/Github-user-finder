@@ -1,10 +1,8 @@
-function App() {
+import Layout from "./components/layout"
+
+const App = () => {
   return (
-    <>
-    <header>
-      Teste
-    </header>
-    </>
+    <Layout/>
   )
 }
 
