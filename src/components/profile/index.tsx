@@ -4,9 +4,6 @@
 const Profile = () => {
     return (
       <>
-      <header>
-        Teste
-      </header>
       </>
     )
   }
