@@ -1,4 +1,5 @@
 import { Header } from "./style";
+import Profile from "../profile";
 
 const Layout = () => {
   return (
@@ -34,6 +35,7 @@ const Layout = () => {
 </svg>
         </div>
       </Header>
+      <Profile/>
     </>
   );
 };
