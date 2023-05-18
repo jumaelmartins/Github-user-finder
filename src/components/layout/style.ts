@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+  /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); */
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  margin: auto;
+  margin: 2rem auto;
   padding: 2rem 0;
-  font-family: "Poppins", sans-serif;
-  color: #0075ff;
+  font-family: 'Roboto', sans-serif;
+  color: #485B6D;
 
   h1 {
-    font-size: 3rem;
+    font-size: 4.4rem;
   }
 
   form {
@@ -47,7 +47,7 @@ export const Header = styled.header`
     font-size: 2rem;
     
     ::placeholder {
-        color: #0075ff;
+        color: #485B6D;
     }
 
   }
@@ -55,6 +55,7 @@ export const Header = styled.header`
     max-width: 100%;
     height: 3.2rem;
     cursor: pointer;
+    fill: #485B6D;
   }
 
   div {
@@ -65,5 +66,6 @@ export const Header = styled.header`
   div > svg {
     height: 3.2rem;
     width: 3.2rem;
+    fill: #485B6D;
   }
 `;
