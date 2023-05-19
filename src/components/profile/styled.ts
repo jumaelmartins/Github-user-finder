@@ -28,14 +28,14 @@ export const Wrapper = styled.main`
 
   section > :nth-child(2) {
     font-style: italic;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #3E5B76;
     font-size: 3.2rem;
     margin: -2rem 0 0 0;
   }
 
   section > :last-child {
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color:#595959;
     font-size: 2.4rem;
     position: relative;
@@ -98,7 +98,7 @@ export const Wrapper = styled.main`
     button {
         display: flex;
         gap: 1rem;
-        font-family: 'poppins', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 600;
         font-size: 1.8rem;
         text-transform: uppercase;
@@ -114,6 +114,10 @@ export const Wrapper = styled.main`
             padding: 0 1rem;
             border-radius: 2.2rem;
             color: #595959;
+        }
+
+        :hover {
+            opacity: .8;
         }
     }
 
