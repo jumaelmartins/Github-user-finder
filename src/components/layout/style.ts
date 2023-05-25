@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); */
   display: flex;
   align-items: center;
   justify-content: space-between;

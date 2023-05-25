@@ -10,6 +10,7 @@ export const Wrapper = styled.main`
     display: flex;
     width: 40rem;
     height: 40rem;
+    border-radius: 100%;
     img {
       max-width: 100%;
     }
@@ -75,10 +76,11 @@ export const Wrapper = styled.main`
             bottom: -.5rem;
         }
 
-        p {
+        p, a {
             font-family: 'roboto', sans-serif;
             font-size: 1.6rem;
             color: #595959;
+            text-decoration: none;
         }
 
         .follows, .following {

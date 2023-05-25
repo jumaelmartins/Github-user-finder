@@ -1,5 +1,6 @@
 import Layout from "./components/layout";
 import { createGlobalStyle } from "styled-components";
+import { GlobalStorage } from "./components/hooks/GlobalContext";
 
 const ResetStyles = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
@@ -18,10 +19,10 @@ const ResetStyles = createGlobalStyle`
 
 const App = () => {
   return (
-    <>
+    <GlobalStorage>
       <ResetStyles />
       <Layout />
-    </>
+    </GlobalStorage>
   );
 };
 

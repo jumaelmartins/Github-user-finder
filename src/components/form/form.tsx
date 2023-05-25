@@ -1,13 +1,17 @@
-import Input from "./input"
+import Input from "./input";
+import React from "react";
+import { GlobalContext } from "../hooks/GlobalContext";
 
 const Form = () => {
-  return (
-    <form>
-        <fieldset>
-            <Input id="search" placeholder="Busque um Usuario..."/>
-        </fieldset>
-      </form>
-  )
-}
+  const global = React.useContext(GlobalContext);
 
-export default Form
+  return (
+    <form onSubmit={global?.handleSubmit}>
+      <fieldset>
+        <Input id="search" placeholder="Busque um Usuario..." />
+      </fieldset>
+    </form>
+  );
+};
+
+export default Form;
