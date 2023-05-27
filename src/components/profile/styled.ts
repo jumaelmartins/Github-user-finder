@@ -10,9 +10,10 @@ export const Wrapper = styled.main`
     display: flex;
     width: 40rem;
     height: 40rem;
-    border-radius: 100%;
     img {
       max-width: 100%;
+      border-radius: 100%;
+      border: solid 3px #EEEEEE;
     }
   }
 

@@ -4,7 +4,7 @@ import { Wrapper } from "./styled";
 import user from "../../assets/icons/users.svg";
 import userCheck from "../../assets/icons/user-check.svg";
 import link from "../../assets/icons/link.svg";
-import linkedin from "../../assets/icons/linkedin-svgrepo-com.svg";
+// import linkedin from "../../assets/icons/linkedin-svgrepo-com.svg";
 
 const Profile = () => {
   const global = React.useContext(GlobalContext);
