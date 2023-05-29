@@ -1,6 +1,8 @@
-import Layout from "./components/layout";
+import Home from "./pages/Home";
 import { createGlobalStyle } from "styled-components";
 import { GlobalStorage } from "./components/hooks/GlobalContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Repo from "./pages/Repo";
 
 const ResetStyles = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
@@ -21,7 +23,12 @@ const App = () => {
   return (
     <GlobalStorage>
       <ResetStyles />
-      <Layout />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="repo" element={<Repo />} />
+        </Routes>
+      </BrowserRouter>
     </GlobalStorage>
   );
 };

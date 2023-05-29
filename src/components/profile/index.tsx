@@ -1,17 +1,23 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { GlobalContext } from "../hooks/GlobalContext";
 import { Wrapper } from "./styled";
-import user from "../../assets/icons/users.svg";
-import userCheck from "../../assets/icons/user-check.svg";
-import link from "../../assets/icons/link.svg";
+import LinkSvgIcon from "../icons/LinkSvgIcon";
+import UserSvgIcon from "../icons/UserSvgIcon";
+import UsersSvgIcon from "../icons/UsersSvgIcon";
 // import linkedin from "../../assets/icons/linkedin-svgrepo-com.svg";
 
 const Profile = () => {
   const global = React.useContext(GlobalContext);
-  
+  const navigate = useNavigate();
+
+  const goToRepo = (event: React.MouseEvent<HTMLButtonElement>) => {
+    global?.handleClick(event)
+    navigate("/repo");
+  };
+
   if (!global?.submitted) return null;
-  console.log(global);
-  
+
   return (
     <>
       <Wrapper>
@@ -29,33 +35,28 @@ const Profile = () => {
           </section>
           <ul>
             <li>
-              <img src={user} alt="" />
+              <UsersSvgIcon color="blue" />
               <p>Seguidores</p>
               <p className="follows">{global?.data?.followers}</p>
             </li>
             <li>
-              <img src={userCheck} alt="" />
+              <UserSvgIcon color="blue" />
               <p>Seguindo</p>
               <p className="following">{global?.data?.following}</p>
             </li>
             <li>
-              <img src={link} alt="" />
-              <a href={global?.data?.blog} target="_blank">{global?.data?.blog}</a>
+              <LinkSvgIcon color="blue" />
+              <a href={global?.data?.blog} target="_blank">
+                {global?.data?.blog}
+              </a>
             </li>
-            {/* <li>
-              <img src={linkedin} alt="" />
-              <p>www.linkedin/user</p>
-            </li> */}
           </ul>
           <div className="user-info__buttons">
-            <button id="repos">
+            <button onClick={goToRepo} id="repos">
               Repositorios
               <label htmlFor="repos">{global?.data?.public_repos}</label>
             </button>
-            <button id="stars">
-              Favoritos
-              {/* <label htmlFor="stars">{global?.data?.blog}</label> */}
-            </button>
+            <button id="stars">Favoritos</button>
           </div>
         </div>
       </Wrapper>

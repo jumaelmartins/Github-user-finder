@@ -64,9 +64,8 @@ export const Wrapper = styled.main`
         gap: 2rem;
         display: flex;
         align-items: center;
-        img {
+        svg {
             max-width: 2.4rem;
-            stroke: red;
         }
         ::after {
             position: absolute;
