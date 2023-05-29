@@ -1,9 +1,13 @@
+import Header from "../components/header/header";
 import Repos from "../components/repos/repos";
 
 const Repo = () => {
   return (
-    <Repos />
-  )
+    <>
+      <Header />
+      <Repos />
+    </>
+  );
 };
 
 export default Repo;

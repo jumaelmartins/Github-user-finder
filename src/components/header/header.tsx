@@ -1,12 +1,16 @@
 import { HeaderContainer } from "./style";
+import { useLocation } from "react-router-dom";
 import Form from "../form/form";
 import Icons from "./icons";
 
 const Header = () => {
+  const location = useLocation();
+  const isRootPath = location.pathname === "/";
+
   return (
     <HeaderContainer>
       <h1>{"<GF/>"}</h1>
-      <Form />
+      {isRootPath && <Form />}
       <Icons />
     </HeaderContainer>
   );
