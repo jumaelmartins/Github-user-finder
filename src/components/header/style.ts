@@ -4,11 +4,10 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  margin: 2rem auto;
   padding: 2rem 0;
   font-family: "Roboto", sans-serif;
   color: #485b6d;
+  background: none;
 
   h1 {
     font-size: 4.4rem;
