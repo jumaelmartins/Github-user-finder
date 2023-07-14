@@ -1,0 +1,20 @@
+import Header from "../components/header/header";
+import mainImg from "../assets/img/undraw_mobile_search_jxq5 1.svg";
+
+import Profile from "../components/profile";
+
+const User = () => {
+  return (
+    <section id="user" className="grid-container">
+      <Header/>
+      <div className="user__grid-collumn--1">
+        <Profile/>
+      </div>
+      <div className="user__grid-collumn--2">
+        <img className="illustration" src={mainImg} />
+      </div>
+    </section>
+  );
+};
+
+export default User;

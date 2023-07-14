@@ -1,9 +1,9 @@
 import React from "react";
+import { redirect } from "react-router-dom";
 
 type GlobalTypeProps = {
   children: React.ReactNode;
 };
-
 
 type GlobalType = {
   submitted: boolean;
@@ -23,6 +23,7 @@ interface gitHubUser {
   followers: number;
   following: number;
   public_repos: number;
+  message?: string;
 }
 
 interface repos {
@@ -39,12 +40,22 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
   const [submitted, setSubmitted] = React.useState(false);
   const [repos, setRepos] = React.useState<null | repos[]>(null);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    event:
+      | React.FormEvent<HTMLFormElement>
+      | React.MouseEvent<HTMLButtonElement>
+  ) => {
     event.preventDefault();
-    setSubmitted(true);
-    fetch(`https://api.github.com/users/${user}`)
-      .then((response) => response.json())
-      .then((json) => setData(json));
+    const response = await fetch(`https://api.github.com/users/${user}`);
+    const json = await response.json();
+    setData(json);
+    if(json.message === "Not Found") {
+      console.log("erro")
+      redirect("/user")
+      console.log("outro erro")
+    } else {
+      setSubmitted(true)
+    }
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
