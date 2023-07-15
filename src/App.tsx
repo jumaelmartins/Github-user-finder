@@ -5,6 +5,7 @@ import { GlobalStorage } from "./components/hooks/GlobalContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Repo from "./pages/Repo";
 import User from "./pages/User";
+import NotFound from "./pages/NotFound";
 
 const ResetStyles = createGlobalStyle`
   @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="user" element={<User />} />
           <Route path="repo" element={<Repo />} />
+          <Route path="404" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </GlobalStorage>

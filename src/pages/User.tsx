@@ -7,10 +7,10 @@ const User = () => {
   return (
     <section id="user" className="grid-container">
       <Header/>
-      <div className="user__grid-collumn--1">
+      <div className="grid-collumn--1 bg-gray">
         <Profile/>
       </div>
-      <div className="user__grid-collumn--2">
+      <div className="grid-collumn--2">
         <img className="illustration" src={mainImg} />
       </div>
     </section>

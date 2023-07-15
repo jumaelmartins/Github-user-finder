@@ -7,22 +7,22 @@
     "header header"
     "profile ilustration";
 }
-.home__grid-collumn--1,
-.home__grid-collumn--2 {
+.grid-collumn--1,
+.grid-collumn--2 {
   min-height: 700px;
   padding: 0 14rem;
 }
 
-.home__grid-collumn--1 {
+.grid-collumn--1 {
   grid-area: profile;
   background: url("/src/assets/img/bg.svg") no-repeat 14rem 0 variables.$g-1;
 }
 
-.user__grid-collumn--1 {
+.bg-gray {
   background: variables.$g-1;
 }
 
-.home__grid-collumn--2 {
+.grid-collumn--2 {
   grid-area: ilustration;
   display: flex;
   justify-content: flex-end;

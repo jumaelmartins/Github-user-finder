@@ -13,7 +13,8 @@ const Profile = () => {
     navigate("/repo");
   };
 
-  if (!global?.submitted) return null;
+  if (!global?.submitted && global?.error === true) return null;
+
 
   return (
     <main className="user">

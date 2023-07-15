@@ -1,11 +1,11 @@
 import React from "react";
-import { redirect } from "react-router-dom";
 
 type GlobalTypeProps = {
   children: React.ReactNode;
 };
 
 type GlobalType = {
+  error: boolean;
   submitted: boolean;
   data: gitHubUser | null;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -38,6 +38,7 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
   const [data, setData] = React.useState<null | gitHubUser>(null);
   const [user, setUser] = React.useState("");
   const [submitted, setSubmitted] = React.useState(false);
+  const [error, setError] = React.useState(false);
   const [repos, setRepos] = React.useState<null | repos[]>(null);
 
   const handleSubmit = async (
@@ -49,13 +50,8 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
     const response = await fetch(`https://api.github.com/users/${user}`);
     const json = await response.json();
     setData(json);
-    if(json.message === "Not Found") {
-      console.log("erro")
-      redirect("/user")
-      console.log("outro erro")
-    } else {
-      setSubmitted(true)
-    }
+    setSubmitted(!submitted);
+    json.message !== "Not Found" ? setError(false) : setError(true);
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -85,6 +81,7 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
         submitted,
         handleClick,
         repos,
+        error,
       }}
     >
       {children}
