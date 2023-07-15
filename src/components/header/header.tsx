@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header__grid-collumn--1">
+      <div className={isRootPath || isUserPath ? "header__grid-collumn--1 bg-gray" : "header__grid-collumn--1"}>
         <div className="header__flex--1">
           <img src={logo} alt="" />
           {isRootPath || isUserPath ? <Form /> : ""}
@@ -23,11 +23,12 @@ const Header = () => {
         </div>
         <nav className="header__nav">
           {isRootPath && <a>Home:</a>}
-          {isUserPath && <><a>Home: </a> <a>User: {global?.data?.name}</a></>}
-          {isRepoPath && <><a>Home: </a> <a>User: {global?.data?.name}:</a> <a>Repos</a></>}
+          {isUserPath && <><a>User: {global?.data?.name}</a></>}
+          {isRepoPath && <><a>User: {global?.data?.name}:</a> <a>Repos</a></>}
         </nav>
       </div>
       <div className="header__grid-collumn--2">
+        {isRepoPath && <img className="avatar" src={global?.data?.avatar_url} alt="Foto do usuario do github selecionado"/>}
         <Icon />
       </div>
     </header>

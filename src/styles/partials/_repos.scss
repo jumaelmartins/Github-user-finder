@@ -1,0 +1,154 @@
+@use "./variables";
+
+.nav {
+  margin: 0 0 4rem 0;
+  ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  ul > li > a {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: variables.$g-10;
+    font-family: "orbitron", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    background: variables.$g-2;
+    border-radius: 0.5rem;
+    transition: all 0.5s;
+    &:hover {
+      background: variables.$g-11;
+      color: white;
+    }
+  }
+}
+
+.user-repos {
+  padding: 10rem 14rem;
+
+  .user-repos-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+    gap: 8rem;
+
+    li > a,
+    li > a:visited {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      color: inherit;
+      height: 20rem;
+      width: 32rem;
+      background: variables.$g-2;
+      border-radius: 2rem;
+      padding: 2.5rem 4rem 0.5rem 4rem;
+      font-family: "orbitron", sans-serif;
+      box-shadow: 0.5rem 0.5rem 1rem 0 variables.$g-5;
+      transition: all 0.5s;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    li > a > h3 {
+      color: variables.$g-13;
+      font-size: 2rem;
+      font-weight: 500;
+      max-height: 2.8rem;
+      overflow: hidden;
+    }
+
+    li > a > p {
+      margin: 2.5rem 0 1rem 0;
+      color: variables.$g-10;
+      font-size: 1.6rem;
+      height: 6rem;
+      overflow: hidden;
+    }
+
+    li > a > b {
+      width: fit-content;
+      width: -moz-fit-content;
+      padding: 1rem 2rem;
+      border-radius: 2.2rem;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.javascript {
+  border-left: 2rem solid yellow;
+
+  b {
+    background: yellow;
+  }
+}
+
+.css {
+  border-left: 2rem solid purple;
+  b {
+    background: purple;
+    color: white;
+  }
+}
+
+.java {
+  border-left: 2rem solid brown;
+  b {
+    background: brown;
+    color: white;
+  }
+}
+
+.scss,
+.sass {
+  border-left: 2rem solid pink;
+  b {
+    background: pink;
+  }
+}
+
+.html {
+  border-left: 2rem solid tomato;
+  b {
+    background: tomato;
+    color: white;
+  }
+}
+
+.typescript {
+  border-left: 2rem solid royalblue;
+  b {
+    background: royalblue;
+    color: white;
+  }
+}
+
+.ejs {
+  border-left: 2rem solid rosybrown;
+  b {
+    background: rosybrown;
+    color: white;
+  }
+}
+
+.python {
+  border-left: 2rem solid darkblue;
+  b {
+    background: darkblue;
+    color: white;
+  }
+}
+
+.vue {
+  border-left: 2rem solid darkgreen;
+  b {
+    background: darkgreen;
+    color: white;
+  }
+}
