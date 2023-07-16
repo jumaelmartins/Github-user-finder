@@ -5,11 +5,6 @@ const Repos = () => {
 
   if (!global?.repos) return null;
 
-  const goToStarred = (event: React.MouseEvent<HTMLButtonElement>) => {
-    global?.handleClick(event);
-    navigate("/starred");
-  };
-
   return (
     <section className="user-repos">
       <nav className="nav">

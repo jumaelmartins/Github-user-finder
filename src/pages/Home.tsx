@@ -10,7 +10,7 @@ const Home = () => {
       <div className="grid-collumn--1">
       </div>
       <div className="grid-collumn--2">
-        <img className="illustration" src={mainImg} />
+        <img className="illustration" src={mainImg} alt="apenas uma ilustração" />
       </div>
     </section>
   );

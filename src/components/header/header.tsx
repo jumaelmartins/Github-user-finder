@@ -13,12 +13,14 @@ const Header = () => {
   const isUserPath = location.pathname === "/user";
   const isRepoPath = location.pathname === "/repo";
   const isStarredPath = location.pathname === "/starred";
+  const isNotFoundPath = location.pathname === "/404";
+
   return (
     <header className="header">
       <div className={isRootPath || isUserPath ? "header__grid-collumn--1 bg-gray" : "header__grid-collumn--1"}>
         <div className="header__flex--1">
           <img src={logo} alt="" />
-          {isRootPath || isUserPath ? <Form /> : ""}
+          {isRootPath || isUserPath || isNotFoundPath ? <Form /> : ""}
           <img src={ret} alt="" />
         </div>
         <nav className="header__nav">
@@ -26,6 +28,7 @@ const Header = () => {
           {isUserPath && <><a>Usuario: {global?.data?.name}</a></>}
           {isRepoPath && <><a>Usuario': {global?.data?.name}:</a> <a>Repos</a></>}
           {isStarredPath && <><a>Usuario: {global?.data?.name}:</a> <a>Favoritos</a></>}
+          {isNotFoundPath && <><a>Usuario: </a> <a>Não Localizado</a></>}
         </nav>
       </div>
       <div className="header__grid-collumn--2">
