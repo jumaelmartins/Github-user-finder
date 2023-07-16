@@ -52,6 +52,14 @@
       &:hover {
         box-shadow: none;
       }
+      position: relative;
+      img {
+        position: absolute;
+        width: 3.2rem;
+        height: 3.2rem;
+        right: -1rem;
+        top: -1rem;
+      }
     }
 
     li > a > h3 {

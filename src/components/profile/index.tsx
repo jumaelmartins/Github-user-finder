@@ -13,8 +13,12 @@ const Profile = () => {
     navigate("/repo");
   };
 
-  if (!global?.submitted && global?.error === true) return null;
+  const goToStarred = (event: React.MouseEvent<HTMLButtonElement>) => {
+    global?.handleClick(event);
+    navigate("/starred");
+  };
 
+  if (!global?.submitted && global?.error === true) return null;
 
   return (
     <main className="user">
@@ -53,7 +57,9 @@ const Profile = () => {
             Repositorios
             <label htmlFor="repos">{global?.data?.public_repos}</label>
           </button>
-          <button id="stars">Favoritos</button>
+          <button onClick={goToStarred} id="stars">
+            Favoritos
+          </button>
         </div>
       </div>
     </main>

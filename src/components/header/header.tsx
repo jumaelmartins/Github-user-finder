@@ -12,7 +12,7 @@ const Header = () => {
   const isRootPath = location.pathname === "/";
   const isUserPath = location.pathname === "/user";
   const isRepoPath = location.pathname === "/repo";
-
+  const isStarredPath = location.pathname === "/starred";
   return (
     <header className="header">
       <div className={isRootPath || isUserPath ? "header__grid-collumn--1 bg-gray" : "header__grid-collumn--1"}>
@@ -22,9 +22,10 @@ const Header = () => {
           <img src={ret} alt="" />
         </div>
         <nav className="header__nav">
-          {isRootPath && <a>Home:</a>}
-          {isUserPath && <><a>User: {global?.data?.name}</a></>}
-          {isRepoPath && <><a>User: {global?.data?.name}:</a> <a>Repos</a></>}
+          {isRootPath && <a>Inicio:</a>}
+          {isUserPath && <><a>Usuario: {global?.data?.name}</a></>}
+          {isRepoPath && <><a>Usuario': {global?.data?.name}:</a> <a>Repos</a></>}
+          {isStarredPath && <><a>Usuario: {global?.data?.name}:</a> <a>Favoritos</a></>}
         </nav>
       </div>
       <div className="header__grid-collumn--2">
