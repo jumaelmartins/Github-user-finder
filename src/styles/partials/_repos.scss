@@ -160,3 +160,53 @@
     color: white;
   }
 }
+
+
+.go {
+    border-left: 2rem solid cyan;
+    b {
+      background: cyan;
+      color: white;
+    }
+  }
+
+  .shell {
+    border-left: 2rem solid greenyellow;
+    b {
+      background: greenyellow;
+      color: white;
+    }
+  }
+
+  .c {
+    border-left: 2rem solid lightpink;
+    b {
+      background: lightpink;
+      color: white;
+    }
+  }
+
+  .ocaml {
+    border-left: 2rem solid salmon;
+    b {
+      background: salmon;
+      color: white;
+    }
+  }
+
+  .ruby {
+    border-left: 2rem solid darkred;
+    b {
+      background: darkred;
+      color: white;
+    }
+  }
+
+  
+  .vim .script {
+    border-left: 2rem solid mediumseagreen;
+    b {
+      background: mediumseagreen;
+      color: white;
+    }
+  }

@@ -1,24 +1,3 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "header header"
-    "profile ilustration";
-}
-
-.home__grid__collumn--1 {
-  grid-area: profile;
-  background: gray;
-}
-
-.home__grid__collumn--2 {
-  grid-area: ilustration;
-}
-
-.header {
-  grid-area: header;
-}
-
 .not-found {
   padding: 4rem 14rem;
 }
