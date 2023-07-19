@@ -6,7 +6,7 @@ const NotFound = () => {
     <>
       <Header />
       <section className="not-found">
-        <img src={notFound} alt="ilutração de pagina não encontrada" />
+        <img className="notfound-img" src={notFound} alt="ilutração de pagina não encontrada" />
       </section>
     </>
   );

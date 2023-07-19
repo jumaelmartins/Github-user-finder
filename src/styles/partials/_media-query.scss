@@ -26,6 +26,15 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .not-found {
+    padding: 4rem 3rem;
+  }
+  
+
+  .user-repos {
+    padding: 10rem 3rem;
+  }
+
   .header .header__grid-collumn--1 {
     padding: 9rem 0 0 3rem;
   }
@@ -48,38 +57,42 @@
 }
 
 @media screen and (max-width: 900px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        "header"
-        "profile";
-    }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "profile";
+  }
 
-    .grid-collumn--2 {
-        display: none;
-    }
+  .grid-collumn--2 {
+    display: none;
+  }
 
-    .header {
-        background: variables.$g-1;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
+  .header {
+    background: variables.$g-1;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    .user-info__container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        max-width: 100%;
-    }
+  .user-info__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
 
-    .user .user-info__buttons {
-        max-width: 100%;
-        flex-wrap: wrap;
-    }
+  .user .user-info__buttons {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .not-found {
+    padding: 4rem 1rem;
+  }
+  
   .header {
     max-width: 100%;
   }
@@ -92,33 +105,32 @@
   }
   .header .header__flex--1 {
     gap: 1rem;
-
   }
 
   .header .header__grid-collumn--2 {
     padding: 2rem 1rem 0 1rem;
-}
+  }
 
-.header form > fieldset > input {
-  font-size: 1.2rem;
-}
+  .header form > fieldset > input {
+    font-size: 1.2rem;
+  }
 
-.header form > fieldset {
-  padding: 0 0 0 .5rem;
-  align-items: center;
-}
-.header .header__flex--1 :last-child {
-  align-self: center;
-}
+  .header form > fieldset {
+    padding: 0 0 0 0.5rem;
+    align-items: center;
+  }
+  .header .header__flex--1 :last-child {
+    align-self: center;
+  }
 
-.header form > fieldset > label > svg {
-  height: 2.4rem;
-  width: 2.4rem;
-}
+  .header form > fieldset > label > svg {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
 
-.toggle-theme {
-  width: 32px;
-}
+  .toggle-theme {
+    width: 32px;
+  }
 
   .detail {
     display: none;
@@ -129,5 +141,18 @@
   }
   .header .header__nav a {
     font-size: 1.5rem;
+  }
+
+  .user-repos {
+    padding: 10rem 1rem;
+  }
+
+  .user-repos .user-repos-card-container {
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .user-repos .user-repos-card-container li > a, .user-repos .user-repos-card-container li > a:visited {
+    width: 28rem;
   }
 }
