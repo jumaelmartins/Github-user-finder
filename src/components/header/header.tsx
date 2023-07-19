@@ -19,9 +19,9 @@ const Header = () => {
     <header className="header">
       <div className={isRootPath || isUserPath ? "header__grid-collumn--1 bg-gray" : "header__grid-collumn--1"}>
         <div className="header__flex--1">
-          <img src={logo} alt="" />
+          <img className="logo" src={logo} alt="" />
           {isRootPath || isUserPath || isNotFoundPath ? <Form /> : ""}
-          <img src={ret} alt="" />
+          <img className="detail" src={ret} alt="" />
         </div>
         <nav className="header__nav">
           {isRootPath && <a>Inicio:</a>}
