@@ -11,7 +11,9 @@ type GlobalType = {
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
   handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  toggleMode: () => void;
   repos: repos[] | null;
+  darkMode: boolean;
 };
 
 interface gitHubUser {
@@ -40,6 +42,11 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
   const [submitted, setSubmitted] = React.useState(false);
   const [error, setError] = React.useState(false);
   const [repos, setRepos] = React.useState<null | repos[]>(null);
+  const [darkMode, setDarkMode] = React.useState(false);
+
+  const toggleMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   const handleSubmit = async (
     event:
@@ -82,6 +89,8 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
         handleClick,
         repos,
         error,
+        toggleMode,
+        darkMode,
       }}
     >
       {children}
