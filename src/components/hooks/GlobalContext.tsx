@@ -14,6 +14,7 @@ type GlobalType = {
   toggleMode: () => void;
   repos: repos[] | null;
   darkMode: boolean;
+  isDarkMode: string;
 };
 
 interface gitHubUser {
@@ -43,6 +44,12 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
   const [error, setError] = React.useState(false);
   const [repos, setRepos] = React.useState<null | repos[]>(null);
   const [darkMode, setDarkMode] = React.useState(false);
+  const [isDarkMode, setIsDarkMode] = React.useState(" ");
+
+  React.useEffect(() => {
+    darkMode === true ? setIsDarkMode(" dark-mode") : setIsDarkMode(" ");
+    console.log(isDarkMode)
+  }, [darkMode]);
 
   const toggleMode = () => {
     setDarkMode(!darkMode);
@@ -91,6 +98,7 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
         error,
         toggleMode,
         darkMode,
+        isDarkMode,
       }}
     >
       {children}

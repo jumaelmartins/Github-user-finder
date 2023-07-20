@@ -8,7 +8,7 @@ const Starred = () => {
   if (!global?.repos) return null;
 
   return (
-    <section className="user-repos">
+    <section className={"user-repos" + global?.isDarkMode}>
       <nav className="nav">
         <ul>
           <li>

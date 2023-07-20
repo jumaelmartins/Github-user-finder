@@ -1,7 +1,87 @@
+@use "./variables";
+
 .not-found {
   padding: 4rem 14rem;
 
   img {
     max-width: 100%;
+  }
+}
+.not-found.dark-mode {
+    background: black;
+}
+
+.header > .header__grid-collumn--1 {
+  &.dark-mode {
+    background: variables.$g-13;
+  }
+}
+
+.header > .header__grid-collumn--1 {
+  &.bg-black.dark-mode {
+    background: black;
+  }
+}
+
+.user {
+  &.dark-mode {
+    background: variables.$g-13;
+  }
+}
+
+.header > .header__grid-collumn--2 {
+  &.dark-mode {
+    background: black;
+  }
+}
+
+.grid-collumn--1 {
+  &.dark-mode {
+    background: url("/src/assets/img/dark-bg.svg") no-repeat 14rem 0
+      variables.$g-13;
+  }
+}
+
+.grid-collumn--2 {
+  &.dark-mode {
+    background: black;
+  }
+}
+
+.user-repos {
+  &.dark-mode {
+    background: black;
+  }
+}
+
+.logo {
+  &.dark-mode {
+    fill: variables.$g-1;
+  }
+}
+
+.header form {
+  &.dark-mode {
+    color: variables.$g-6;
+    fieldset {
+      background: variables.$g-12;
+    }
+    fieldset:hover {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.header {
+  &.dark-mode {
+    .header__nav a {
+      color: variables.$g-1;
+    }
+  }
+}
+.header .header__grid-collumn--2 svg {
+  &.dark-mode {
+    fill: variables.$g-1;
   }
 }

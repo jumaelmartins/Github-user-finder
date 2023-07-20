@@ -13,7 +13,7 @@ const Form = () => {
   }, [global?.submitted]);
 
   return (
-    <form onSubmit={global?.handleSubmit}>
+    <form className={global?.isDarkMode} onSubmit={global?.handleSubmit}>
       <fieldset>
         <Input id="search" placeholder="Busque um Usuario..." />
       </fieldset>

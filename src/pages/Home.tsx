@@ -10,12 +10,12 @@ const Home = () => {
     <section
       id="home"
       className={
-        "grid-container" + (global?.darkMode === true ? " dark-mode" : " ")
+        "grid-container" + global?.isDarkMode
       }
     >
-      <Header />
-      <div className="grid-collumn--1"></div>
-      <div className="grid-collumn--2">
+      <Header  darkMode={global?.isDarkMode} />
+      <div className={"grid-collumn--1" + global?.isDarkMode}></div>
+      <div className={"grid-collumn--2" + global?.isDarkMode}>
         <img
           className="illustration"
           src={mainImg}

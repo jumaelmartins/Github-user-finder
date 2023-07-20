@@ -21,7 +21,7 @@ const Profile = () => {
   if (!global?.submitted && global?.error === true) return null;
 
   return (
-    <main className="user">
+    <main className={"user" + global?.isDarkMode}>
       <figure className="user-avatar__container">
         <img
           src={global?.data?.avatar_url}

@@ -10,6 +10,7 @@
   .header__flex--1 {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
 
     :last-child {
       align-self: flex-end;
@@ -80,6 +81,7 @@
 
     svg {
       cursor: pointer;
+      fill: variables.$g-13;
     }
 
     .avatar {
@@ -88,4 +90,8 @@
       border-radius: 50%;
     }
   }
+}
+
+.logo {
+  fill: variables.$g-13;
 }

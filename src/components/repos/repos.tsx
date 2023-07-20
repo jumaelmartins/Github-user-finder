@@ -6,7 +6,7 @@ const Repos = () => {
   if (!global?.repos) return null;
 
   return (
-    <section className="user-repos">
+    <section className={"user-repos" + global?.isDarkMode}>
       <nav className="nav">
         <ul>
           <li><a href="/">VOLTAR PARA O INICIO</a></li>
