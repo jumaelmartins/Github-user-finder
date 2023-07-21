@@ -51,7 +51,7 @@ export const GlobalStorage = ({ children }: GlobalTypeProps) => {
     console.log(isDarkMode)
   }, [darkMode]);
 
-  const toggleMode = () => {
+  const toggleMode = (): void => {
     setDarkMode(!darkMode);
   };
 

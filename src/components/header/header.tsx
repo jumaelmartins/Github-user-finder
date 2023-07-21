@@ -66,8 +66,13 @@ const Header = () => {
           )}
         </nav>
       </div>
-      <div className={isRootPath || isUserPath
-            ? "header__grid-collumn--2" + global?.isDarkMode: "header__grid-collumn--2 bg-black" + global?.isDarkMode}>
+      <div
+        className={
+          isRootPath || isUserPath
+            ? "header__grid-collumn--2" + global?.isDarkMode
+            : "header__grid-collumn--2 bg-black" + global?.isDarkMode
+        }
+      >
         {isRepoPath && (
           <img
             className="avatar"
@@ -75,7 +80,7 @@ const Header = () => {
             alt="Foto do usuario do github selecionado"
           />
         )}
-        <Icon handleClick={global?.toggleMode} />
+        {global && <Icon handleClick={global.toggleMode} />}
       </div>
     </header>
   );
