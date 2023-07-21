@@ -8,7 +8,7 @@
   }
 }
 .not-found.dark-mode {
-    background: black;
+  background: black;
 }
 
 .header > .header__grid-collumn--1 {
@@ -83,5 +83,59 @@
 .header .header__grid-collumn--2 svg {
   &.dark-mode {
     fill: variables.$g-1;
+  }
+}
+
+.user.dark-mode h2 {
+  color: variables.$g-1;
+}
+
+.user.dark-mode section > :last-child {
+  color: variables.$g-11;
+}
+
+.user.dark-mode .user-info__buttons #stars {
+  background: black;
+}
+
+.user.dark-mode ul li {
+  border-bottom: 1px solid variables.$g-12;
+}
+
+.user-repos.dark-mode .user-repos-card-container li > a,
+.user-repos.dark-mode .user-repos-card-container li > a:visited {
+  background: variables.$g-13;
+  box-shadow: 2px 2px 0 0 variables.$g-12;
+}
+.user-repos.dark-mode .user-repos-card-container li > a > h3 {
+  color: white;
+}
+
+.user-repos.dark-mode .user-repos-card-container li > a > p {
+  color: variables.$g-6;
+}
+
+.user-repos.dark-mode .nav ul > li > a {
+  background: variables.$g-12;
+  &:hover {
+    background: variables.$g-6;
+    color: variables.$g-12;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header.bg-black.dark-mode {
+    background: black;
+  }
+
+  .header.dark-mode {
+    background: variables.$g-13;
+  }
+
+  .header.dark-mode > .header__grid-collumn--2 {
+    background: variables.$g-13;
+  }
+
+  .header.bg-black.dark-mode > .header__grid-collumn--2 {
+    background: black;
   }
 }

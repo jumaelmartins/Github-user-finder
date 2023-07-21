@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Form from "../form/form";
 import Icon from "./icons";
-import logo from "../../assets/icons/logo.svg";
 import ret from "../../assets/icons/ret.svg";
 import React from "react";
 import { GlobalContext } from "../hooks/GlobalContext";
@@ -16,7 +15,13 @@ const Header = () => {
   const global = React.useContext(GlobalContext);
 
   return (
-    <header className={"header" + global?.isDarkMode}>
+    <header
+      className={
+        isRootPath || isUserPath
+          ? "header" + global?.isDarkMode
+          : "header bg-black" + global?.isDarkMode
+      }
+    >
       <div
         className={
           isRootPath || isUserPath
@@ -61,7 +66,8 @@ const Header = () => {
           )}
         </nav>
       </div>
-      <div className={"header__grid-collumn--2" + global?.isDarkMode}>
+      <div className={isRootPath || isUserPath
+            ? "header__grid-collumn--2" + global?.isDarkMode: "header__grid-collumn--2 bg-black" + global?.isDarkMode}>
         {isRepoPath && (
           <img
             className="avatar"

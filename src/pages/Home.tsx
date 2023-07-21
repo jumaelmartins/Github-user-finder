@@ -7,13 +7,8 @@ const Home = () => {
   const global = React.useContext(GlobalContext);
 
   return (
-    <section
-      id="home"
-      className={
-        "grid-container" + global?.isDarkMode
-      }
-    >
-      <Header  darkMode={global?.isDarkMode} />
+    <section id="home" className={"grid-container" + global?.isDarkMode}>
+      <Header />
       <div className={"grid-collumn--1" + global?.isDarkMode}></div>
       <div className={"grid-collumn--2" + global?.isDarkMode}>
         <img
