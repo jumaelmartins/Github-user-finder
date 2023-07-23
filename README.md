@@ -10,15 +10,16 @@ Projeto de um app de Busca de Usuarios do Github.
 
 ##### Previa Desktop
 ![Screenshot Desktop](/public/desktop-preview.png)
-<!-- ##### Previa Mobile
-![Screenshot Mobile](./mobile-preview.png) -->
+##### Previa Mobile
+![Screenshot Mobile](./public/mobile-preview.png)
 
 
 #### Principais funcionalidades
 
 - [X] Buscar usuarios, e vizualuzar informações do Perfil;
 - [X] Listagem de Repositorios do Usuario selecionado.
-- [] Listagem de Repositorios marcados como Starred do Usuario selecionado
+- [x] Listagem de Repositorios marcados como Starred do Usuario selecionado
+- [x] Darkmode
 
 ## 💻 Pré-requisitos
 
@@ -64,7 +65,9 @@ iniciar o servidor em ambiente de produção
 - TypeScript
 - React
 - Styled-Components
+- Sass
 - Flexbox
+- Grid Display
 - Vite
 
 ## 💥O que aprendi ao desenvolver esse projeto:
